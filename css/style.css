@@ -90,7 +90,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(media/points-lines.png);
+    background-image: url(../media/points-lines.png);
 }
 
 /*------------ MAIN SECTION CONFIGS ------------*/
