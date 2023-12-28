@@ -440,7 +440,7 @@ textarea:hover {
 }
 
 /* xs */
-@media (max-width: 475px) {
+@media (max-width: 575px) {
     .container {
         width: 100%;
     }
