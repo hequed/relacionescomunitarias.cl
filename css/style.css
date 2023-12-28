@@ -34,7 +34,7 @@ body {
 
 header {
     padding: 20px;
-    background-image: url(/media/reptile.jpg);
+    background-image: url(./media/reptile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -90,7 +90,7 @@ header {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(/media/points-lines.png);
+    background-image: url(./media/points-lines.png);
 }
 
 /*------------ MAIN SECTION CONFIGS ------------*/
