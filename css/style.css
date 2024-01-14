@@ -101,7 +101,7 @@ header {
 /*------------ HERO SECTION CONFIGS ------------*/
 
 .hero-wrapper-fondo {
-    background-image: url(/media/divisor.png);
+    background-image: url(../media/divisor.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -356,7 +356,7 @@ header {
     margin-bottom: 40px;
     padding: 20px;
     background-color: #f4f4f4;
-    background-image: url(/media/esculture.jpg);
+    background-image: url(../media/esculture.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
