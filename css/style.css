@@ -1,6 +1,7 @@
 /*------------ IMPORTS ------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 /*------------ GLOBAL CONFIGS ------------*/
 
@@ -30,11 +31,18 @@ body {
     padding-right: 0.5rem;
 }
 
+.wrapper-main {
+    /* Añade lobo a la izquierda de la pagina */
+    background-image: url(../media/wolf-logo.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
 /*------------ HEADER SECTION CONFIGS ------------*/
 
 header {
     padding: 20px;
-    background-image: url(../media/reptile.jpg);
+    background-image: url(../media/wolfpack.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,24 +58,17 @@ header {
     padding: 10px;
 }
 
-.nav {
-    
-}
-
 .botones-nav {
     transition: 0.3s ease;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
-    border-top: 4px solid #3fa46a;
-    border-bottom: 4px solid #3fa46a;
     padding: 20px 0;
     margin: 0 20px;
 }
 
 .botones-nav:hover {
-    border-top: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
+    color: #00d853;
     padding: 6px 0;
 }
 
@@ -82,6 +83,16 @@ header {
     color: white;
 }
 
+.nav-list li a:hover {
+    text-decoration: none;
+    color: #25D366;
+}
+
+.nav-list li a:active {
+    text-decoration: none;
+    color: #25D366;
+}
+
 .abrir-menu,
 .cerrar-menu {
     display: none;
@@ -89,15 +100,83 @@ header {
 
 /*------------ HERO SECTION CONFIGS ------------*/
 
+.hero-wrapper-fondo {
+    background-image: url(/media/divisor.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 60px;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(../media/points-lines.png);
+    margin: 40px;
+    padding: 20px;
+}
+
+.hero h1 {
+    transition: 0.3s ease;
+    font-size: 4.6rem;
+    font-weight: 700;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.hero h1:hover {
+    color: #00d853;
+}
+
+.hero h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #00d853;
+    font-family: 'Major Mono Display', monospace;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 80%;
+    animation: animate 6s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.boton-contacto {
+    margin-top: 40px;
+}
+
+.hero .boton-contacto a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background: #00d853;
+    border-radius: 12px;
+    box-shadow: 0 0 1rem white;
+    font-size: 1.6rem;
+    color: #ffffff;
+    /* Letras oscuras */
+    letter-spacing: .1rem;
+    font-weight: 400;
+    transition: .5s ease;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.hero .boton-contacto a:hover {
+    background: #000000;
+    box-shadow: 0 0 1rem #00d853;
+    color: #FFFFFF;
+    transform: scale(1.15)
 }
 
 /*------------ MAIN SECTION CONFIGS ------------*/
@@ -115,10 +194,25 @@ header {
 .cards {
     padding: 20px;
     width: 450px;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave por defecto */
+    background-image: url(../media/smoked.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: white;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+    /* Escala ligeramente el elemento al pasar el mouse */
 }
 
 .cards h3 {
-    color: #096A2E;
+    color: #00d853;
 }
 
 .acerca-container {
@@ -128,24 +222,21 @@ header {
     color: white;
     border-radius: 12px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave por defecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave por defecto */
+    background-image: url(../media/lines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 .acerca-container:hover {
     background-color: #333;
-    color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
-    transform: scale(1.05); /* Escala ligeramente el elemento al pasar el mouse */
-}
-
-.divisor-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: 40px;
+    color: #00d853;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada al pasar el mouse */
+    transform: scale(1.05);
+    /* Escala ligeramente el elemento al pasar el mouse */
 }
 
 /*------------ GALERIA SECTION CONFIGS ------------*/
@@ -200,14 +291,160 @@ header {
     }
 }
 
-/*------------ FORMULARIO DE CONTACTO SECTION CONFIGS ------------*/
+/*------------ PRODUCTOS Y SERVICIOS ------------*/
 
-.contacto-container {
+.produtos-servicos-container {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.productos-servicios {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-image: url(../media/points-lines.png);
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 80px;
+}
+
+.productos-servicios h2 {
+    font-size: 3rem;
+    margin: 150px;
+    color: white;
+    color: #00d853;
+}
+
+.cards-product {
+    padding: 20px;
+    width: 450px;
+    border-radius: 12px;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    /* Sombra suave por defecto */
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cards-product:hover {
+    transform: scale(1.05);
+    /* Escala ligeramente el elemento al pasar el mouse */
+}
+
+.cards-product h3 {
+    color: #00d853;
+}
+
+/*------------ EQUIPO SECTION CONFIGS ------------*/
+
+.equipo-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    background-image: url(/media/esculture.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.equipo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b7;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.equipo h3 {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    margin-top: 22px;
+}
+
+.equipo p {
+    color: #00d853;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    font-family: 'Major Mono Display', monospace;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #00d853, #fff, #00d853);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 7s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+.cards-container-equipo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-equipo {
+    width: 350px;
+    background-color: #000000b7;
+    border-radius: 8px;
+    padding: 26px;
+    text-align: center;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-equipo img {
+    width: 100%;
+    border-radius: 20%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.card-equipo h3 {
+    margin: 0;
+    color: #00d853;
+}
+
+.card-equipo p {
+    margin: 8px 0;
+    color: #f0f0f0;
+}
+
+/*------------ FORMULARIO DE CONTACTO SECTION CONFIGS ------------*/
+
+.contacto-container {}
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -390,6 +627,10 @@ textarea:hover {
     justify-content: center;
     align-items: center;
     font-family: 'Major Mono Display', monospace;
+    background-image: url(../media/wolf-lines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
 
 }
 
@@ -523,6 +764,11 @@ textarea:hover {
         border-top: 0;
     }
 
+    .hero-wrapper-fondo {
+        margin: 0;
+        margin-top: 40px;
+    }
+
     .hero {
         display: flex;
         flex-direction: column;
@@ -531,6 +777,61 @@ textarea:hover {
         background-image: url(../media/points-lines.png);
         background-repeat: no-repeat;
         background-size: cover;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        align-items: center;
+        transition: 0.3s ease;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: 'Major Mono Display', monospace;
+    }
+    
+    .hero h1:hover {
+        color: #00d853;
+    }
+    
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+    
+    @keyframes animate {
+        0% {
+            background-position: -500%;
+        }
+    
+        100% {
+            background-position: 500%;
+        }
+    }
+    
+    .boton-contacto {
+        margin-top: 40px;
+    }
+    
+    .hero .boton-contacto a {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        background: #00d853;
+        border-radius: 12px;
+        box-shadow: 0 0 1rem white;
+        font-size: 1.6rem;
+        color: #ffffff;
+        /* Letras oscuras */
+        letter-spacing: .1rem;
+        font-weight: 400;
+        transition: .5s ease;
+        font-family: 'Major Mono Display', monospace;
+    }
+    
+    .hero .boton-contacto a:hover {
+        background: #000000;
+        box-shadow: 0 0 1rem #00d853;
+        color: #FFFFFF;
+        transform: scale(1.15)
     }
 
     .hero img {
@@ -539,6 +840,10 @@ textarea:hover {
         width: 310px;
         height: 200px;
         visibility: visible;
+    }
+
+    .acerca-container {
+        display: none;
     }
 
     .gallery {
@@ -630,6 +935,32 @@ textarea:hover {
     #submit:hover {
         color: white;
         background-color: #096A2E;
+    }
+
+    .equipo-wrapper {
+        margin: 0;
+        padding: 5;
+    }
+
+    .equipo {
+        margin: 0;
+        margin-top: 10px;
+        padding: 5;
+    }
+
+    .equipo h3 {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .equipo p {
+        display: none;
+    }
+
+    .cards-container-equipo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -726,6 +1057,7 @@ textarea:hover {
         position: relative;
         width: 450px;
         margin: 50px auto 100px auto;
+        display: none;
     }
 
     input {
