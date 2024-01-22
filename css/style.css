@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 
 /*------------ GLOBAL CONFIGS ------------*/
 
@@ -41,11 +42,17 @@ body {
 /*------------ HEADER SECTION CONFIGS ------------*/
 
 header {
-    padding: 20px;
-    background-image: url(../media/wolfpack.jpg);
+    padding-top: 0px;
+    /*background-image: url(../media/wolfpack.jpg);*/
+    background-color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background: #000000;
+    background-image: url(/media/stars.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
 .header-elements {
@@ -68,7 +75,7 @@ header {
 }
 
 .botones-nav:hover {
-    color: #00d853;
+    color: #ccd5ae;
     padding: 6px 0;
 }
 
@@ -80,17 +87,18 @@ header {
 
 .nav-list li a {
     text-decoration: none;
-    color: white;
+    text-shadow: 0 0 1rem #ccd5ae;
+    color: #FFFFFF;
 }
 
 .nav-list li a:hover {
     text-decoration: none;
-    color: #25D366;
+    color: #ccd5ae;
 }
 
 .nav-list li a:active {
     text-decoration: none;
-    color: #25D366;
+    color: #ccd5ae;
 }
 
 .abrir-menu,
@@ -101,11 +109,13 @@ header {
 /*------------ HERO SECTION CONFIGS ------------*/
 
 .hero-wrapper-fondo {
-    background-image: url(../media/divisor.png);
-    background-size: contain;
+    background-image: url(../media/clouds.png);
+    background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 60px;
+    color: white;
+    padding: 300px;
+    margin-bottom: 80px;
 }
 
 .hero {
@@ -115,23 +125,31 @@ header {
     align-items: center;
     margin: 40px;
     padding: 20px;
+    background-image: url(/media/H9hPeQXLL8JMWx5HOQ.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
     transition: 0.3s ease;
-    font-size: 4.6rem;
+    font-size: 5.6rem;
     font-weight: 700;
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Megrim', system-ui;
+    text-shadow: 0 0 1rem #E9EDC9;
+    color: #ccd5ae;
 }
 
 .hero h1:hover {
-    color: #00d853;
+    color: #FFFFFF;
+    text-shadow: 0 0 1rem #E9EDC9;
 }
 
 .hero h3 {
+    font-family: 'Megrim', system-ui;
     font-size: 3.2rem;
-    font-weight: 700;
-    color: #00d853;
+    font-weight: 500;
+    color: #ccd5ae;
     font-family: 'Major Mono Display', monospace;
     letter-spacing: 1px;
     overflow: hidden;
@@ -160,21 +178,21 @@ header {
 .hero .boton-contacto a {
     display: inline-block;
     padding: 1rem 1.5rem;
-    background: #00d853;
-    border-radius: 12px;
+    background: #FEFAE0;
+    border-radius: 8px;
     box-shadow: 0 0 1rem white;
-    font-size: 1.6rem;
-    color: #ffffff;
+    font-size: 1.9rem;
+    color: #000000;
     /* Letras oscuras */
     letter-spacing: .1rem;
-    font-weight: 400;
+    font-weight: 800;
     transition: .5s ease;
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Megrim', system-ui;
 }
 
 .hero .boton-contacto a:hover {
     background: #000000;
-    box-shadow: 0 0 1rem #00d853;
+    box-shadow: 0 0 1rem #ccd5ae;
     color: #FFFFFF;
     transform: scale(1.15)
 }
@@ -187,6 +205,7 @@ header {
     justify-content: center;
     color: #040D12;
     margin-top: 10px;
+    margin-bottom: 78px;
     padding: 20px;
     gap: 20px;
 }
@@ -212,7 +231,8 @@ header {
 }
 
 .cards h3 {
-    color: #00d853;
+    color: #FEFAE0;
+    text-shadow: 0 0 1rem #000000;
 }
 
 .acerca-container {
@@ -232,7 +252,7 @@ header {
 
 .acerca-container:hover {
     background-color: #333;
-    color: #00d853;
+    color: #FEFAE0;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Sombra más pronunciada al pasar el mouse */
     transform: scale(1.05);
@@ -311,24 +331,35 @@ header {
     margin-bottom: 80px;
 }
 
-.productos-servicios h2 {
-    font-size: 3rem;
-    margin: 150px;
-    color: white;
-    color: #00d853;
+#titulo-productos h2 {
+    padding: 30px;
+    justify-content: center;
+    font-size: 7rem;
+    align-items: center;
+    font-family: 'Megrim', system-ui;
+    text-shadow: 0 0 1rem #000000;
+    color: #000000;
 }
 
 .cards-product {
     padding: 20px;
     width: 450px;
+    border: solid rgba(255, 255, 255, 0.3);;
     border-radius: 12px;
-    background-color: white;
+    background: rgba(254, 250, 224, 0.4);
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.356);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(5px);
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
     /* Sombra suave por defecto */
+}
+
+.cards-product i {
+    font-size: 2rem;
+    padding-bottom: 10px;
 }
 
 @keyframes reveal {
@@ -346,23 +377,25 @@ header {
 }
 
 .cards-product h3 {
-    color: #00d853;
+    color: #000000;
+    text-shadow: 0 0 1rem #ebf8c0;
 }
 
 /*------------ EQUIPO SECTION CONFIGS ------------*/
 
 .equipo-wrapper {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-bottom: 100px;
+    padding-top: 30px;
     background-color: #f4f4f4;
-    background-image: url(../media/esculture.jpg);
+    background-image: url(/media/stars.jpg);
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
 }
 
-.equipo {
+#equipo {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -374,21 +407,24 @@ header {
     border-radius: 8px;
 }
 
-.equipo h3 {
+#equipo h3 {
     font-size: 3rem;
     color: white;
-    font-family: 'Major Mono Display', monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 22px;
+    text-shadow: 0 0 1rem #FEFAE0;
+    color: #FFFFFF;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
-.equipo p {
-    color: #00d853;
+#equipo p {
+    color: #FAEDCD;
     font-size: 1.8rem;
     margin-top: 10px;
     font-family: 'Major Mono Display', monospace;
     letter-spacing: 1px;
     overflow: hidden;
-    background: linear-gradient(90deg, #00d853, #fff, #00d853);
+    background: linear-gradient(90deg, #CCD5AE, #fff, #FAEDCD);
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 7s linear infinite;
@@ -417,12 +453,15 @@ header {
 
 .card-equipo {
     width: 350px;
-    background-color: #000000b7;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.11);
     padding: 26px;
     text-align: center;
     margin: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .card-equipo img {
@@ -434,7 +473,8 @@ header {
 
 .card-equipo h3 {
     margin: 0;
-    color: #00d853;
+    color: #FEFAE0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .card-equipo p {
@@ -627,11 +667,10 @@ textarea:hover {
     justify-content: center;
     align-items: center;
     font-family: 'Major Mono Display', monospace;
-    background-image: url(../media/wolf-lines.png);
-    background-repeat: no-repeat;
+    background-image: url(/media/stars.jpg);
+    background-position: center;
     background-size: contain;
-    background-position: left;
-
+    background-repeat: repeat;
 }
 
 .marca-logo {
@@ -708,6 +747,7 @@ textarea:hover {
 @media (max-width: 640px) {
     .container {
         max-width: 475px;
+        margin-left: 0px;
     }
 
     .abrir-menu,
@@ -769,12 +809,28 @@ textarea:hover {
         margin-top: 40px;
     }
 
+    .hero-wrapper-fondo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../media/clouds.png);
+        background-color: #000000;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        height: 700px;
+    }
+
     .hero {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        background-image: url(../media/points-lines.png);
+        background-image: none;
         background-repeat: no-repeat;
         background-size: cover;
         margin: 0;
@@ -783,19 +839,16 @@ textarea:hover {
     }
 
     .hero h1 {
-        align-items: center;
         transition: 0.3s ease;
         font-size: 1.2rem;
         font-weight: 700;
         font-family: 'Major Mono Display', monospace;
-    }
-    
-    .hero h1:hover {
-        color: #00d853;
+        margin-top: 40px;
     }
     
     .hero h3 {
-        font-size: 1.2rem;
+        margin-top: 10px;
+        font-size: 1.8rem;
     }
     
     @keyframes animate {
@@ -809,27 +862,24 @@ textarea:hover {
     }
     
     .boton-contacto {
-        margin-top: 40px;
+        margin-top: 90px;
     }
     
     .hero .boton-contacto a {
-        display: inline-block;
+        display: flex;
+        align-items: center;
         padding: 1rem 1.5rem;
-        background: #00d853;
         border-radius: 12px;
         box-shadow: 0 0 1rem white;
         font-size: 1.6rem;
-        color: #ffffff;
         /* Letras oscuras */
         letter-spacing: .1rem;
         font-weight: 400;
         transition: .5s ease;
-        font-family: 'Major Mono Display', monospace;
     }
     
     .hero .boton-contacto a:hover {
         background: #000000;
-        box-shadow: 0 0 1rem #00d853;
         color: #FFFFFF;
         transform: scale(1.15)
     }
@@ -857,86 +907,6 @@ textarea:hover {
         background-size: contain;
     }
 
-    #form {
-        position: relative;
-        width: 450px;
-        margin: 50px auto 100px auto;
-    }
-
-    input {
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-        width: 450px;
-        height: 50px;
-        padding: 0px 15px 0px 15px;
-
-        background: transparent;
-        outline: none;
-        color: #726659;
-
-        border: solid 1px #b3aca7;
-        border-bottom: none;
-
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-    }
-
-    input:hover {
-        background: #b3aca7;
-        color: #e2dedb;
-    }
-
-    textarea {
-        width: 450px;
-        max-width: 470px;
-        height: 110px;
-        max-height: 110px;
-        padding: 15px;
-
-        background: transparent;
-        outline: none;
-
-        color: #726659;
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-
-        border: solid 1px #b3aca7;
-
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-    }
-
-    textarea:hover {
-        background: #b3aca7;
-        color: #e2dedb;
-    }
-
-    #submit {
-        width: 450px;
-
-        padding: 0;
-        margin: -5px 0px 0px 0px;
-
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-        color: #b3aca7;
-
-        outline: none;
-        cursor: pointer;
-
-        border: solid 1px #b3aca7;
-        border-top: none;
-    }
-
-    #submit:hover {
-        color: white;
-        background-color: #096A2E;
-    }
-
     .equipo-wrapper {
         margin: 0;
         padding: 5;
@@ -949,7 +919,7 @@ textarea:hover {
     }
 
     .equipo h3 {
-        font-size: 1.6rem;
+        font-size: 2rem;
         margin: 0;
     }
 
@@ -968,6 +938,7 @@ textarea:hover {
 @media (max-width: 575px) {
     .container {
         width: 100%;
+        margin-left: 0px;
     }
 
     .abrir-menu,
@@ -1029,7 +1000,7 @@ textarea:hover {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        background-image: url(../media/points-lines.png);
+        background-image: none;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -1046,6 +1017,12 @@ textarea:hover {
         display: none;
     }
 
+    #titulo-productos h2 {
+        padding: 0px;
+        font-size: 5rem;
+        margin-bottom: 40px;
+    }
+
     .contacto-container {
         background-image: url(../media/points-lines.png);
         background-repeat: no-repeat;
@@ -1054,83 +1031,19 @@ textarea:hover {
     }
 
     #form {
-        position: relative;
-        width: 450px;
-        margin: 50px auto 100px auto;
         display: none;
     }
 
-    input {
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-        width: 450px;
-        height: 50px;
-        padding: 0px 15px 0px 15px;
-
-        background: transparent;
-        outline: none;
-        color: #726659;
-
-        border: solid 1px #b3aca7;
-        border-bottom: none;
-
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
+    #equipo {
+        flex-direction: column;
     }
 
-    input:hover {
-        background: #b3aca7;
-        color: #e2dedb;
+    #equipo h3 {
+        font-size: 2rem;
+        margin-top: 2px;
     }
 
-    textarea {
-        width: 450px;
-        max-width: 470px;
-        height: 110px;
-        max-height: 110px;
-        padding: 15px;
-
-        background: transparent;
-        outline: none;
-
-        color: #726659;
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-
-        border: solid 1px #b3aca7;
-
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-    }
-
-    textarea:hover {
-        background: #b3aca7;
-        color: #e2dedb;
-    }
-
-    #submit {
-        width: 450px;
-
-        padding: 0;
-        margin: -5px 0px 0px 0px;
-
-        font-family: 'Lato', sans-serif;
-        font-size: 0.875em;
-        color: #b3aca7;
-
-        outline: none;
-        cursor: pointer;
-
-        border: solid 1px #b3aca7;
-        border-top: none;
-    }
-
-    #submit:hover {
-        color: white;
-        background-color: #096A2E;
+    #equipo p {
+        display: none;
     }
 }
