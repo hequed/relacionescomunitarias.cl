@@ -756,7 +756,7 @@ textarea:hover {
 }
 
 /* sm */
-@media (max-width: 470px) {
+@media (max-width: 570px) {
   .container {
     max-width: 475px;
   }
@@ -970,7 +970,7 @@ textarea:hover {
 }
 
 /* xs */
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .container {
     width: 100%;
   }
