@@ -49,7 +49,7 @@ header {
     background-position: center;
     background-size: cover;
     background: #000000;
-    background-image: url(/media/stars.jpg);
+    background-image: url(../media/stars.jpg);
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -125,7 +125,7 @@ header {
     align-items: center;
     margin: 40px;
     padding: 20px;
-    background-image: url(/media/H9hPeQXLL8JMWx5HOQ.webp);
+    background-image: url(../media/H9hPeQXLL8JMWx5HOQ.webp);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
