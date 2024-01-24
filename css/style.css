@@ -504,6 +504,7 @@ header {
 
   h3 {
     font-size: 50px;
+    margin-top: 20px;
     font-family: exo, sans-serif;
   }
 
@@ -839,6 +840,10 @@ header {
     background-size: contain;
   }
 
+  #contact-us {
+    margin-top: 50px;
+  }
+
   .equipo-wrapper {
     margin: 0;
     padding: 5;
@@ -986,4 +991,5 @@ header {
   #equipo p {
     display: none;
   }
+}
 }
