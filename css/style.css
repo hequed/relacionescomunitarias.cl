@@ -729,6 +729,7 @@ header {
     align-items: center;
     justify-content: center;
     background-color: #000000;
+    background-image: url(../media/image.png);
     background-position: center;
     background-repeat: no-repeat;
     color: white;
